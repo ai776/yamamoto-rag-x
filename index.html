@@ -123,6 +123,8 @@
                 <div class="border-b-2 border-gray-200">
                     <button @click="open = 'tokutei'" :class="{'text-blue-600 border-blue-600': open === 'tokutei'}" class="text-xl font-bold pb-2 border-b-4 transition-colors">特定商取引法に基づく表記</button>
                     <button @click="open = 'privacy'" :class="{'text-blue-600 border-blue-600': open === 'privacy'}" class="text-xl font-bold pb-2 ml-6 border-b-4 border-transparent transition-colors">プライバシーポリシー</button>
+                    <button @click="open = 'service'" :class="{'text-blue-600 border-blue-600': open === 'service'}" class="text-xl font-bold pb-2 ml-6 border-b-4 border-transparent transition-colors">役務提供期間</button>
+                    <button @click="open = 'terms'" :class="{'text-blue-600 border-blue-600': open === 'terms'}" class="text-xl font-bold pb-2 ml-6 border-b-4 border-transparent transition-colors">利用規約</button>
                 </div>
 
                 <!-- 特定商取引法に基づく表記 -->
@@ -181,6 +183,78 @@
                     <div>
                         <h4 class="font-bold text-lg mb-2">個人情報の第三者への開示</h4>
                         <p>当法人は、個人情報を本人の許可無く他の事業者や個人などの第三者に提供および公開することはありません。ただし、官公庁等の公的機関から法令に基づき開示を求められた場合などはその限りではありません。</p>
+                    </div>
+                </div>
+
+                <!-- 役務提供期間 -->
+                <div x-show="open === 'service'" x-transition class="bg-gray-50 p-8 rounded-lg border space-y-6 text-gray-700 leading-relaxed">
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">提供役務</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                <div>
+                                    <span class="font-semibold">サービス提供期間：</span>購入から12ヶ月間
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                <div>
+                                    <span class="font-semibold">専用メンバーズサイト：</span>オンラインカリキュラムの閲覧
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                <div>
+                                    <span class="font-semibold">個別相談：</span>Chatwork、電話、zoomでの個別相談
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 利用規約 -->
+                <div x-show="open === 'terms'" x-transition class="bg-gray-50 p-8 rounded-lg border space-y-6 text-gray-700 leading-relaxed">
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">利用規約</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                本サービスのサービス提供期間は12ヶ月となり、途中退会の受付はしておりません。
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                本サービスのカリキュラム閲覧は基本的に受講期間内となります。
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                本サービスでは、サポートは定める期間限りとなります。
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                本サービスの権利を第三者に譲渡することを固く禁じます。
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                本サービスはお客様に金額的な成果などを保証するものではございません。
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                本サービスの分割でのお支払いが滞った場合は、法的に請求させていただく場合もございます。
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                本サービスを受けていかなる不利益が発生しても、弊社では一切の責任を免責させて頂きます。
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                お客様都合による返金対応は理由の如何に関わらず対応しておりませんので、ご了承ください。
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold text-blue-700 mr-2">•</span>
+                                本サービスをお申し込むにあたっては、上記事項を必ずご確認の上、お手続き願います。
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

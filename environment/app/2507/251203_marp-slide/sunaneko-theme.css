@@ -1,0 +1,1082 @@
+/*
+ * @theme sunaneko
+ * @auto-scaling true
+*/
+
+@import 'default';
+
+:root {
+    /* アクセントカラー */
+    --blue-very-deep: #2C67E5;
+    --red-deep: #f45e5eff;
+
+    /* グレースケール（sunaneko規定） */
+    --gray-darkest: #000000;
+
+    /* 最も濃いグレー */
+    --gray-dark: #262626;
+
+    /* 濃いグレー - メインテキスト */
+    --gray-medium: #434343;
+
+    /* 中間グレー - サブテキスト */
+    --gray-light: #595959;
+
+    /* 薄いグレー - 補助テキスト */
+    --gray-lighter: #646464;
+
+    /* より薄いグレー - ボーダー等 */
+    --gray-lightest: #999999;
+
+    /* 基本カラー */
+    --white: #FFFFFF;
+    --black: #092750ff;
+
+    /* 背景カラー */
+    --bg-default: #ffffff;
+
+    /* 標準背景色（白） */
+    --bg-accent: #ffffff;
+
+    /* アクセント背景色 */
+    --bg-accent-code: #e1e1e1;
+
+    /* 注釈 */
+    --border-color: #D9D9D9;
+
+
+    /* フォントサイズ変数 */
+    --font-size-title: 38px;
+
+    /* タイトル */
+    --font-size-large: 36px;
+
+    /* 大きなテキスト */
+    --font-size-medium: 32px;
+
+    /* 中サイズテキスト */
+    --font-size-body: 26px;
+
+    /* 本文サイズ */
+    --font-size-small: 22px;
+
+    /* 小さなテキスト */
+    --font-size-caption: 20px;
+
+    /* キャプション */
+    --font-size-note: 16px;
+
+    /* 行間変数 */
+    --line-height-tight: 1.15;
+
+    /* 狭い行間 */
+    --line-height-normal: 1.21;
+
+    /* 標準行間 */
+    --line-height-loose: 1.5;
+
+    /* レイアウト */
+    --slide-width: 1920px;
+    --slide-height: 1080px;
+    --content-padding: 92px;
+    --border-radius: 8px;
+    --border-width: 1.47px;
+}
+
+section.small-text {
+    /* フォントサイズ変数（20%程度縮小） */
+
+    /* タイトル */
+    --font-size-large: 29px;
+
+    /* 大きなテキスト */
+    --font-size-medium: 26px;
+
+    /* 中サイズテキスト */
+    --font-size-body: 21px;
+
+    /* 本文サイズ */
+    --font-size-small: 18px;
+
+    /* 小さなテキスト */
+    --font-size-caption: 16px;
+
+    /* キャプション */
+    --font-size-note: 13px;
+
+    /* 行間変数 */
+
+    /* 狭い行間 */
+    --line-height-tight: 1;
+
+    /* 標準行間 */
+    --line-height-normal: 1.1;
+
+    /* 広い行間 */
+    --line-height-loose: 1.3;
+
+    /* レイアウト */
+    --slide-width: 1920px;
+    --slide-height: 1080px;
+    --content-padding: 92px;
+    --border-radius: 8px;
+    --border-width: 1.47px;
+}
+
+*:not(code *) {
+    color: #092750ff;
+}
+
+/* 基本的なマークダウンタグのスタイル */
+
+/* 見出しタグ */
+h1 {
+    font-size: var(--font-size-title);
+    line-height: var(--line-height-tight);
+    font-weight: 600;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-bottom: 0;
+    color: #092750ff;
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-tight);
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+    color: #092750ff;
+}
+
+h3 {
+    font-size: var(--font-size-medium);
+    color: #092750ff;
+    line-height: var(--line-height-normal);
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+}
+
+h4 {
+    font-size: var(--font-size-body);
+    color: #092750ff;
+    line-height: var(--line-height-normal);
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+}
+
+h5 {
+    font-size: var(--font-size-small);
+    color: #092750ff;
+    line-height: var(--line-height-normal);
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+}
+
+h6 {
+    font-size: var(--font-size-caption);
+    color: #092750ff;
+    line-height: var(--line-height-normal);
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+}
+
+h1>strong,
+h2>strong,
+h3>strong,
+h4>strong,
+h5>strong,
+h6>strong {
+    color: var(--red-deep);
+}
+
+/* 本文・段落 */
+p {
+    font-size: var(--font-size-body);
+    color: #092750ff;
+    line-height: var(--line-height-loose);
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+/* リスト */
+ul,
+ol {
+    font-size: var(--font-size-body);
+    color: #092750ff;
+    line-height: var(--line-height-loose);
+    padding-left: 4px;
+    margin-top: 0;
+    margin-left: 22px;
+    margin-bottom: 8px;
+}
+
+ol {
+    margin-left: 32px;
+}
+
+li {
+    padding-top: 6px;
+
+    ul,
+    ol {
+        margin-left: 0;
+        padding-left: 32px;
+        margin-top: 0;
+    }
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &+li {
+        margin-top: 0;
+    }
+
+    &::marker {
+        margin-left: 6px;
+    }
+
+}
+
+/* 見出し直後のリストのマージンを削除 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    &+ul,
+    &+ol {
+        margin-top: 0;
+    }
+}
+
+code {
+    background-color: var(--bg-accent-code);
+    color: var(--gray-darkest);
+}
+
+/* 強調・斜体 */
+strong {
+    font-weight: 700;
+    color: #092750ff;
+}
+
+em {
+    font-style: italic;
+    color: #092750ff;
+}
+
+:is(pre, marp-pre) {
+    background-color: var(--bg-accent-code);
+    font-size: var(--font-size-small);
+    margin-bottom: 8px;
+}
+
+/* 引用 */
+blockquote {
+    font-size: var(--font-size-body);
+    color: #092750ff;
+    border-left: 4px solid var(--gray-light);
+    padding-left: 1rem;
+    margin: 12px 4px;
+    font-style: italic;
+
+    &::after {
+        display: none;
+    }
+
+    &::before {
+        display: none;
+    }
+
+    p::after {
+        display: none;
+    }
+}
+
+/* リンク */
+a {
+    color: var(--blue-very-deep);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 表 */
+table {
+    font-size: 18px;
+    color: #092750ff;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+
+    thead {
+
+        th {
+            background-color: var(--bg-accent);
+            color: #092750ff;
+            border: 1.3px solid var(--border-color);
+            font-weight: 400;
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                background-color: var(--white);
+                color: #092750ff;
+                border: 1.3px solid var(--border-color);
+            }
+
+            &:nth-child(odd) {
+                td {
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+/* カスタムテーブルスタイル（ヘッダー背景#092750、テキスト白、罫線#092750） */
+section.table-custom {
+    table {
+        background-color: #f2f2f2ff;
+
+        thead {
+            th {
+                background-color: #092750;
+                color: #FFFFFF;
+                border: 1.3px solid #092750;
+                font-weight: 400;
+                padding: 12px;
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    background-color: #f2f2f2ff;
+                    color: #092750ff;
+                    border: 1.3px solid #092750;
+                    padding: 12px;
+                }
+
+                td:not(:empty) {
+                    background-color: var(--white) !important;
+                }
+
+                &:nth-child(odd) {
+                    td:not(:empty) {
+                        background-color: var(--white) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 目次スライド用のテーブルスタイル */
+section.agenda {
+    border-bottom: 30px solid #092750ff !important;
+
+    table {
+        border: none !important;
+        width: auto !important;
+        margin: 0 !important;
+        border-collapse: separate !important;
+        border-spacing: 0 12px !important;
+        font-size: 1em !important;
+        background-color: transparent !important;
+
+        thead {
+            display: none !important;
+        }
+
+        tbody tr {
+            border: none !important;
+            background-color: transparent !important;
+
+            td {
+                padding-top: 12px !important;
+                padding-bottom: 12px !important;
+                border: none !important;
+                background-color: transparent !important;
+                color: #092750ff !important;
+            }
+
+            &:nth-child(odd) td {
+                background-color: transparent !important;
+            }
+
+            /* 番号部分（1列目） */
+            td:first-child {
+                background-color: #092750ff !important;
+                color: #FFFFFF !important;
+                font-weight: bold !important;
+                padding: 12px 20px !important;
+                border-radius: 8px !important;
+                border: none !important;
+                text-align: center !important;
+                min-width: 60px !important;
+            }
+
+            /* アジェンダ名部分（2列目） */
+            td:nth-child(2),
+            td:last-child {
+                color: #092750ff !important;
+                border: none !important;
+                padding-left: 16px !important;
+                font-size: 1em !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+
+
+/* 小さなテキスト・注釈 */
+small {
+    font-size: var(--font-size-note);
+    color: #092750ff;
+    line-height: var(--line-height-normal);
+}
+
+
+section {
+    background-color: #f2f2f2ff;
+    background-image: none;
+    font-family: var(--font-family);
+    height: 100%;
+    padding: 100px 60px 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 4px solid #092750ff;
+    border-bottom: 30px solid #092750ff;
+    box-sizing: border-box;
+
+    /* タイトルとセクション以外は同じ背景色を維持 */
+    &:not(.title):not(.section) {
+        background-color: #f2f2f2ff !important;
+    }
+
+    &.no-header {
+        padding: 30px 60px 0 60px;
+    }
+
+    >h1:first-child:not(.no-header > h1):not(.title > h1) {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+        color: #092750ff;
+        margin: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--black);
+            z-index: 100;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        width: 150px;
+        height: 60px;
+        background-image: url('https://raw.githubusercontent.com/suh-sunaneko/sunaneko-marp-slide/main/images/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 100;
+        font-size: 0;
+        line-height: 0;
+        color: transparent;
+        display: flex;
+        align-items: center;
+    }
+
+    &[data-marpit-pagination]::after {
+        content: "" !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        color: transparent !important;
+    }
+
+
+    &.title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: #092750ff;
+        padding: 100px;
+        color: #FFFFFF;
+        position: relative;
+
+        >h1:first-child {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFFFFF !important;
+            margin: 0;
+            width: auto;
+            height: auto;
+            display: block;
+            padding-left: 0;
+            align-items: normal;
+            font-size: 50px !important;
+            white-space: nowrap !important;
+
+            &::after {
+                display: none !important;
+            }
+        }
+
+        >h1:first-child+h2 {
+            text-align: center;
+            position: absolute;
+            top: calc(50% - 80px);
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FFFFFF !important;
+            margin: 0;
+            margin-bottom: 20px;
+            width: auto;
+            height: auto;
+            display: block;
+            padding-left: 0;
+        }
+
+        >h1:first-child+h3,
+        >h1:first-child~h3 {
+            text-align: center;
+            position: absolute;
+            top: calc(50% + 35px);
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FFFFFF !important;
+            margin: 0;
+            margin-top: 0;
+            width: auto;
+            height: auto;
+            display: block;
+            padding-left: 0;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #FFFFFF;
+        }
+
+        p {
+            color: #FFFFFF;
+        }
+
+        p:has(img) {
+            margin-top: auto;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        img {
+            max-width: 300px !important;
+            width: auto !important;
+            height: auto !important;
+        }
+
+        ::after {
+            display: none;
+        }
+
+    }
+
+    &.section {
+        background-color: #092750ff;
+        padding: 0 100px;
+        justify-content: center;
+        color: #FFFFFF;
+
+        h1 {
+            position: static;
+            color: #FFFFFF;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #FFFFFF;
+        }
+
+        p {
+            color: #FFFFFF;
+        }
+
+        ::after {
+            display: none;
+        }
+
+        >* {
+            margin: 0;
+            position: static;
+        }
+    }
+
+    &.image {
+        >p:has(img) {
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    &.content-image {
+        >p:has(img) {
+            height: fit-content;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+
+    }
+
+    &.content-image-right {
+        padding-right: 50%;
+
+        &.content-30 {
+            padding-right: 70%;
+        }
+
+        &.content-40 {
+            padding-right: 60%;
+        }
+
+        &.content-60 {
+            padding-right: 40%;
+        }
+
+        &.content-70 {
+            padding-right: 30%;
+        }
+
+        &.content-80 {
+            padding-right: 20%;
+        }
+
+        p:has(img) {
+            height: calc(100% - 80px);
+            position: absolute;
+            top: 80px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 0;
+            padding-left: 16px;
+            padding-right: 20px;
+            background-color: var(--bg-accent);
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &.content-image-left {
+        padding-left: 50%;
+
+        &.content-30 {
+            padding-left: 70%;
+        }
+
+        &.content-40 {
+            padding-left: 60%;
+        }
+
+        &.content-60 {
+            padding-left: 40%;
+        }
+
+        &.content-70 {
+            padding-left: 30%;
+        }
+
+        &.content-80 {
+            padding-left: 20%;
+        }
+
+        p:has(img) {
+            height: calc(100% - 80px);
+            position: absolute;
+            top: 80px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 0;
+            padding-left: 20px;
+            padding-right: 16px;
+            background-color: var(--bg-accent);
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &.image-shadow {
+        img {
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &.all-text-center,
+    &.h1-text-center h1,
+    &.h2-text-center h2,
+    &.h3-text-center h3,
+    &.h4-text-center h4,
+    &.h5-text-center h5,
+    &.h6-text-center h6,
+    &.text-center p {
+        text-align: center;
+    }
+
+    &.align-center {
+        justify-content: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 150px;
+            height: 60px;
+            background-image: url('https://raw.githubusercontent.com/suh-sunaneko/sunaneko-marp-slide/main/images/logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 100;
+            font-size: 0;
+            line-height: 0;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+
+    }
+
+    &.all-text-blue *,
+    &.text-blue p {
+        color: var(--blue-very-deep);
+    }
+
+    &.all-text-red *,
+    &.h1-text-red h1,
+    &.h2-text-red h2,
+    &.h3-text-red h3,
+    &.h4-text-red h4,
+    &.h5-text-red h5,
+    &.h6-text-red h6,
+    &.text-red p {
+        color: var(--red-deep);
+    }
+
+    &.column-layout {
+        flex-direction: row;
+        gap: 16px;
+        justify-content: space-around;
+
+        .column {
+            width: 50%;
+
+            h2 {
+                background-color: #092750ff;
+                color: #FFFFFF;
+                padding: 12px 20px;
+                border-radius: 8px;
+                margin-bottom: 16px;
+                margin-top: 0;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: var(--font-size-body);
+                color: #092750ff;
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+
+            h3~p,
+            h3~ul,
+            h3~ol {
+                font-size: var(--font-size-small);
+                line-height: var(--line-height-normal);
+            }
+
+            h3~ul li,
+            h3~ol li {
+                font-size: var(--font-size-small);
+            }
+        }
+
+        /* 4カラムレイアウト用（プロジェクトフェーズなど） */
+        .column:nth-child(1):nth-last-child(4),
+        .column:nth-child(2):nth-last-child(3),
+        .column:nth-child(3):nth-last-child(2),
+        .column:nth-child(4):nth-last-child(1) {
+            width: 23% !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        /* 4カラムレイアウト時のh2スタイル */
+        .column:nth-child(1):nth-last-child(4) h2,
+        .column:nth-child(2):nth-last-child(3) h2,
+        .column:nth-child(3):nth-last-child(2) h2,
+        .column:nth-child(4):nth-last-child(1) h2 {
+            font-size: 0.9em !important;
+            min-height: 60px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+        }
+    }
+
+    /* Mermaid Ganttチャート用スタイル */
+    .mermaid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 40px) !important;
+        min-height: calc(100% - 80px);
+        max-width: calc(100% - 40px) !important;
+        max-height: calc(100vh - 280px) !important;
+        overflow: hidden !important;
+        margin: 80px auto 0 auto !important;
+        padding: 0;
+        position: relative;
+        box-sizing: border-box;
+        align-self: center;
+    }
+
+    .mermaid svg {
+        display: block;
+        max-width: 100% !important;
+        width: 100% !important;
+        max-height: calc(100vh - 280px) !important;
+        height: auto !important;
+        transform: scale(1) !important;
+        transform-origin: center !important;
+        position: relative;
+    }
+
+    /* フルスクリーンスライド用 */
+    section.no-header .mermaid svg {
+        transform: scale(3.0);
+        transform-origin: center;
+    }
+
+
+    /* MermaidのGanttチャートの内部要素を適切に配置 */
+    .mermaid svg g.grid .tick line,
+    .mermaid svg g.grid .domain {
+        stroke-width: 1;
+    }
+
+    /* MermaidのGanttチャートの色をカスタマイズ */
+    /* タスク（要件定義など）の色設定 - 枠線を確実に表示 */
+    .mermaid svg rect[class*="task"],
+    .mermaid svg .task rect,
+    .mermaid svg .section0 rect.task,
+    .mermaid svg .section1 rect.task,
+    .mermaid svg .section2 rect.task,
+    .mermaid svg .section3 rect.task,
+    .mermaid svg rect.task,
+    .mermaid svg g[class*="task"] rect,
+    .mermaid svg g[class*="section"] rect[class*="task"],
+    .mermaid svg g[class*="section"]>rect,
+    .mermaid svg g[class*="task"]>rect,
+    .mermaid svg g[class*="section"] rect:not([class*="grid"]):not([class*="axis"]),
+    .mermaid svg g[class*="section"] g rect {
+        fill: #ffffff !important;
+        stroke: #f2f2f2ff !important;
+        stroke-width: 2px !important;
+        stroke-dasharray: none !important;
+        stroke-opacity: 1 !important;
+        stroke-linecap: round !important;
+        stroke-linejoin: round !important;
+    }
+
+    /* より包括的なセレクタでタスクのrect要素を対象にする */
+    .mermaid svg g[class*="section"] g[class*="task"] rect,
+    .mermaid svg g[class*="section"] g rect[class*="task"],
+    .mermaid svg g[class*="section"] g>rect {
+        fill: #ffffff !important;
+        stroke: #f2f2f2ff !important;
+        stroke-width: 2px !important;
+        stroke-dasharray: none !important;
+        stroke-opacity: 1 !important;
+    }
+
+    /* すべてのタスクrect要素に枠線を適用（最も包括的なセレクタ） */
+    .mermaid svg rect:not([class*="grid"]):not([class*="axis"]):not([class*="section"]):not([id*="grid"]):not([id*="axis"]) {
+        stroke: #f2f2f2ff !important;
+        stroke-width: 2px !important;
+        stroke-opacity: 1 !important;
+    }
+
+    /* タスクのrect要素のみに背景色を適用 */
+    .mermaid svg g[class*="section"] g rect:not([class*="grid"]):not([class*="axis"]) {
+        fill: #ffffff !important;
+    }
+
+    /* タスクテキストの色 */
+    .mermaid svg .taskText,
+    .mermaid svg text[class*="taskText"],
+    .mermaid svg text.taskText,
+    .mermaid svg g[class*="task"] text,
+    .mermaid svg .section0 text,
+    .mermaid svg .section1 text,
+    .mermaid svg .section2 text,
+    .mermaid svg .section3 text {
+        fill: #092750ff !important;
+    }
+
+    /* Ganttチャートのタイトルの色 */
+    .mermaid svg .titleText,
+    .mermaid svg text[class*="title"],
+    .mermaid svg g[class*="title"] text {
+        fill: #092750ff !important;
+    }
+
+    /* Ganttチャートの日付・軸の色 */
+    .mermaid svg .axis text,
+    .mermaid svg .tick text,
+    .mermaid svg text[class*="axis"],
+    .mermaid svg text[class*="tick"],
+    .mermaid svg g[class*="axis"] text,
+    .mermaid svg g[class*="tick"] text,
+    .mermaid svg g[class*="grid"] text {
+        fill: #092750ff !important;
+    }
+
+    /* Ganttチャート内のすべてのテキスト要素の色を統一 */
+    .mermaid svg text {
+        fill: #092750ff !important;
+    }
+
+    /* セクション（フェーズ）の背景色をスライド背景と同じ色に */
+    .mermaid svg .section0,
+    .mermaid svg .section1,
+    .mermaid svg .section2,
+    .mermaid svg .section3 {
+        fill: #f2f2f2ff;
+    }
+
+    .mermaid svg .sectionTitle {
+        fill: #092750ff;
+    }
+
+    /* アクティブなタスクの色 */
+    .mermaid svg .task.active rect {
+        fill: #2C67E5;
+        stroke: #2C67E5;
+    }
+
+    /* 完了したタスクの色 */
+    .mermaid svg .task.done rect {
+        fill: #4CAF50;
+        stroke: #4CAF50;
+    }
+
+    /* 重要なタスクの色 */
+    .mermaid svg .task.crit rect {
+        fill: #f45e5eff;
+        stroke: #f45e5eff;
+    }
+
+    /* 現在日を示すラインを非表示 */
+    .mermaid svg line[class*="today"],
+    .mermaid svg line[stroke*="red"],
+    .mermaid svg .todayLine,
+    .mermaid svg line[style*="stroke:red"],
+    .mermaid svg line[style*="stroke:#f45e5e"],
+    .mermaid svg line[style*="stroke:#f45e5eff"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    /* スクリプトタグを非表示にする */
+    script {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+    }
+
+    /* スクリプトを含むdivも非表示 */
+    div:has(script),
+    div[style*="display:none"]:has(script),
+    div.mermaid-script {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+    }
+
+}

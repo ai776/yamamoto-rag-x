@@ -78,7 +78,7 @@ echo $X_API_BEARER_TOKEN
 **やること:**
 
 ### 1. X API セットアップチェック
-Bashツールで `echo $X_API_BEARER_TOKEN` を実行し、環境変数の設定状況を確認する。
+Bashツールで `source ~/.bashrc 2>/dev/null; echo $X_API_BEARER_TOKEN` を実行し、環境変数の設定状況を確認する（シェル起動時に読み込まれない場合があるため、必ず `source ~/.bashrc` してから確認すること）。
 
 **未設定の場合、以下の案内を表示する:**
 
@@ -424,6 +424,13 @@ X API: 設定済み（フル機能でリサーチできます）
       description: "トーンや切り口を変えて再生成します"
     - label: "別テーマでもう1本"
       description: "別のテーマで追加の記事を生成します"
+
+4. ユーザーが「OK」または「一部修正したい」で確定した後、記事をマークダウンファイルとして保存する:
+   - **保存先**: `/Users/teach/environment/app/2507/260406_yamamoto-rag-x/articles/`
+   - **ファイル名**: `YYMMDD_テーマの短縮英語名.md`（例: `260406_claude-code-ha-nandemo-dekiru-dakara-tsukawanai.md`）
+   - YYMMDDは記事生成日（今日の日付）
+   - articlesフォルダが存在しない場合は自動作成する
+   - 保存後、ファイルパスをユーザーに表示する
 
 ---
 
